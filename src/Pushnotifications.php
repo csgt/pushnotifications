@@ -37,7 +37,7 @@ class Pushnotifications {
       } 
       return json_encode($response);
     } 
-    catch (Exception $e) {
+    catch (\Exception $e) {
       $response['codigoerror'] = 2;
       $response['error']       = 'Error conectando a APNs: ' . $e->getMessage();
       return json_encode($response);
@@ -81,7 +81,7 @@ class Pushnotifications {
       }
       return json_encode($response);
     } 
-    catch (Exception $e) {
+    catch (\Exception $e) {
       $response['codigoerror'] = 2;
       $response['error']       = 'Error conectando a APNs: ' . $e->getMessage();
       return json_encode($response);
